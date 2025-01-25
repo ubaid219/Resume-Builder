@@ -115,6 +115,10 @@ const loginUser = asyncHandler(async (req, res) => {
 
   const options = {
     httpOnly: true,
+    secure: true,
+  sameSite: 'none', // Critical for cross-domain
+  domain: undefined, // Allows cookie across subdomains
+};
   };
 
   return res
