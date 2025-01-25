@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 mongoose.set('strictQuery', false);
 
-const mongoURI = "mongodb://localhost:27017/ResumeBuilder";
+const mongoURI = "mongodb+srv://ubaidshafi00:Hdu2nheSaMSnM3Fl@resumoo.xd6rx.mongodb.net/?retryWrites=true&w=majority&appName=Resumoo";
 
 const connectToMongo = async () => {
   try {
