@@ -119,7 +119,7 @@ const loginUser = asyncHandler(async (req, res) => {
   sameSite: 'none', // Critical for cross-domain
   domain: undefined, // Allows cookie across subdomains
 };
-  };
+
 
   return res
     .status(201)
