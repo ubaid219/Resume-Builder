@@ -46,7 +46,7 @@ const App = () => {
 
   useEffect(() => {
     fetchUser();
-  }, isAuthorized);
+  }, []);
 
   const toggleMode = () => {
     if (mode === "light") {
