@@ -19,7 +19,7 @@ import TemplateDisplay from "./components/templates/TemplateDisplay";
 import { url } from "../assets/asset";
 
 const App = () => {
-  const { setIsAuthorized, setUser } = useContext(Context);
+  const {isAuthorized, setIsAuthorized, setUser } = useContext(Context);
   const [mode, setMode] = useState("light");
   
 
@@ -46,7 +46,7 @@ const App = () => {
 
   useEffect(() => {
     fetchUser();
-  }, [setIsAuthorized, setUser]);
+  }, isAuthorized);
 
   const toggleMode = () => {
     if (mode === "light") {
