@@ -31,7 +31,7 @@ const Login = (props) => {
         { withCredentials: true }
       );
 
-      if ((response.status = 201)) {
+      if ((response.status === 201)) {
         toast.success(response.data.message);
         setIsAuthorized(true);
         props.fetchUser();
