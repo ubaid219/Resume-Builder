@@ -5,6 +5,7 @@ import { Context } from "../../main";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { url } from "../../../assets/asset";
 
 const Login = (props) => {
   const [type, setType] = useState("password");
@@ -25,7 +26,7 @@ const Login = (props) => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/users/login",
+        `${url}/api/v1/users/login`,
         data,
         { withCredentials: true }
       );

@@ -16,15 +16,19 @@ import Certification from "./components/Forms/Certification";
 import TemplateSelector from "./components/templates/TemplateSelector";
 import AboutUs from "./components/Home/AboutUs";
 import TemplateDisplay from "./components/templates/TemplateDisplay";
+import { url } from "../assets/asset";
 
 const App = () => {
   const { setIsAuthorized, setUser } = useContext(Context);
   const [mode, setMode] = useState("light");
+  
+
+
 
   const fetchUser = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/users/getUser",
+        `${url}/api/v1/users/getUser `,
         {
           withCredentials: true,
         }
@@ -39,6 +43,7 @@ const App = () => {
     }
   };
 
+
   useEffect(() => {
     fetchUser();
   }, [setIsAuthorized, setUser]);
@@ -52,6 +57,7 @@ const App = () => {
       document.body.style.backgroundColor = "white";
     }
   };
+  
 
   return (
     <>

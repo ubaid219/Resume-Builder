@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { url } from "../../../assets/asset";
 
 const Register = () => {
   
@@ -30,7 +31,7 @@ const Register = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/users/register",
+        `${url}/api/v1/users/register`,
         data
       );
   

@@ -4,6 +4,7 @@ import { FaUser } from "react-icons/fa";
 import { Context } from "../../main";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { url } from "../../../assets/asset";
 
 const Navbar = (props) => {
   const { isAuthorized, setIsAuthorized, user } = useContext(Context);
@@ -15,7 +16,7 @@ const Navbar = (props) => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/users/logout",
+        `${url}/api/v1/users/logout`,
         {
           withCredentials: true,
         }
